@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Simple Website</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">LOGO</div>
+        <div class="links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="highlights.html">Highlights</a>
+            <a href="#services.html">Services</a>
+        </div>
+        <div class="search">
+            <input type="text" name="" placeholder="search"> 
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>A Story Worth Remembering</h1>
+        <p>
+            Discovering the people, moments and people that makes this my favorite.
+        </p>
+        <a href="about.html" class="button">Explore More</a>
+
+    </section>
+    <section class="featured">
+        <h2>Featured</h2>
+        <p>Get to know my favorite</p>
+
+        <div class="featured-card">
+            <img src="pic.hotel2.jpg" alt="featured">
+
+            <div class="featured-text">
+                <h3>My favorite place</h3>
+                <p>This is my favorite place because there could be enjoyable moments.</p>
+                <a href="highlights.html" class="button">See Highlights</a>
+            </div>
+        </div>
+        <div class="reason">
+            <div class="reason-card">
+                <h3>The Character😁🤦‍♂️</h3>
+                <p>The character are interesting and memorable</p>
+            </div>
+            <div class="reason-card1">
+                <h3>The Music🎶</h3>
+                <p>The music makes the scene more enjoyable and emotional.</p>
+            </div>
+            <div class="reason-card2">
+                <h3>The Music🎶</h3>
+                <p>The music makes the scene more enjoyable and emotional.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function logout() {
+            if(confirm("Are you sure you want to logout?")) {
+                alert("Successfully logged out.");
+                window.location.href = "login.html";
+            }
+            else {
+                alert("Logout cancelled.");
+            }
+           
+        }
+    </script>
+
+
+</body>
+</html>

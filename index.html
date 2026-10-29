@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form onsubmit="login(); return false;">
+        <h2>Log In</h2>
+
+        <label for="username">Username:</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            required
+        >
+
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+        >
+
+        <button type="submit">Log In</button>
+    </form>
+
+    <script>
+        function login() {
+            const username =
+                document.getElementById("username").value;
+
+            const password =
+                document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin123") {
+                alert("Login successful, Welcome, " + username + "!");
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+
+</body>
+</html>

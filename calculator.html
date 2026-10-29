@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator </h2>
+    <input type="number" id="number1" placeholder="firstnumber"><br>
+    <select id="operation">
+        <option value="">Choose an Operator </option>
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiplication</option>
+        <option value="/">Division</option> <br>
+        
+    </select><br><br>
+    <input type="number" id="number2" placeholder="secondnumber">
+    <button onclick="calculate()">Calculator</button>
+
+    <h2 id="result">This is the result:</h2>
+    <br><br>
+
+    
+        <div id="page">
+            <h1 id="title"> Sample Javascript</h1>
+            <button onclick="changeBlue()">Blue</button>
+            <button onclick="changeRed()">Red</button>
+            <button onclick="changeGreen()">Green</button>
+            <button onclick="changeReset()">Reset</button>
+            <button onclick="changeText()">Change Text</button>
+            <button onclick="resetText()">Reset Text</button>
+            
+
+            </div>
+
+    <script> 
+
+        function changeBlue() {
+            document.getElementById("page").style.backgroundColor = "blue";
+        }
+        function changeRed() {
+            document.getElementById("page").style.backgroundColor = "red";
+        }
+        function changeGreen() {
+            document.getElementById("page").style.backgroundColor = "green";
+        }
+        function changeReset() {
+            document.getElementById("page").style.backgroundColor = "white";
+        }
+        function changeText() {
+            document.getElementById("title").innerHTML = "Hello, It's me, Angel Mae Melicor!";
+        }
+        function resetText() {
+            document.getElementById("title").innerHTML = "Sample Javascript";
+        }
+
+        const originalTitle = document.getElementById("title").textContent;
+        function resetText() {
+            document.getElementById("title").textContent = originalTitle;
+        }
+
+        function calculate() {
+            let num1 = Number(document.getElementById("number1").value);
+            let num2 = Number(document.getElementById("number2").value);
+            let operation= (document.getElementById("operation").value);
+
+
+
+            let result;
+
+            if (operation === "+") {
+                result = num1 + num2;
+            } else if (operation === "-") {
+                result = num1 - num2;
+            } else if (operation === "*") {
+                result = num1 * num2;
+            } else if (operation === "/") {
+                if (num2 === 0) {
+                      alert("Error: Division by zero is not allowed.");
+                    return;
+                }
+                      result = num1 / num2;        
+            } else {
+                alert("Invalid operation.");
+                return;
+            }
+            document.getElementById("result").innerHTML ="Result:" + result
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
